@@ -1,8 +1,7 @@
 import * as C from './styles'
 
 import { items } from '../../data/items'
-
-import { formatDate } from '../../helpers/dateFilter'
+import { TableItem } from '../TableItem'
 
 export function Table(){
   return(
@@ -18,12 +17,7 @@ export function Table(){
         </thead>
         <tbody>
           {items.map((item, index)=>(
-            <tr key={index}>
-              <td>{formatDate(item.date)}</td>
-              <td>{item.category}</td>
-              <td>{item.title}</td>
-              <td>{item.value}</td>
-            </tr>
+            <TableItem key={index} item={item} />
           ))}
         </tbody>
       </C.Table>

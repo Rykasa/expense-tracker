@@ -3,9 +3,9 @@ export function formatDate(date: Date){
   let month = date.getMonth()
   let day = date.getDate()
 
-  return `${day}/${month}/${year}`
+  return `${convertDateToTwoDigits(day)}/${convertDateToTwoDigits(month)}/${year}`
 }
 
-function formatDateToTwoDigits(){
-  
+function convertDateToTwoDigits(date: number){
+  return date < 10 ? '0' + `${date}` : date
 }
