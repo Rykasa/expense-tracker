@@ -31,3 +31,10 @@ export function filterListByMonth(list: Item[], date: string){
 
   return newList
 }
+
+
+export function formatCurrentMonth(date: string): string{
+  const months = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+  const [year, month] = date.split('-')
+  return `${months[parseInt(month) - 1]} de ${year}`
+}

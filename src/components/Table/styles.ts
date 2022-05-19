@@ -9,6 +9,7 @@ export const Container = styled.div`
   border-radius: 5px;
   margin-top: -15px;
   background-color: #fff;
+  border: 1px solid #387780;
 `;
 
 export const Table = styled.table`
