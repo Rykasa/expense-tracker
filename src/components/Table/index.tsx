@@ -1,9 +1,13 @@
 import * as C from './styles'
 
-import { items } from '../../data/items'
+import { Item } from '../../types/Item'
 import { TableItem } from '../TableItem'
 
-export function Table(){
+type TableProps = {
+  list: Item[]
+}
+
+export function Table({ list }: TableProps){
   return(
     <C.Container>
       <C.Table>
@@ -16,7 +20,7 @@ export function Table(){
           </tr>
         </thead>
         <tbody>
-          {items.map((item, index)=>(
+          {list.map((item, index)=>(
             <TableItem key={index} item={item} />
           ))}
         </tbody>
