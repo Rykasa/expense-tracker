@@ -38,3 +38,8 @@ export function formatCurrentMonth(date: string): string{
   const [year, month] = date.split('-')
   return `${months[parseInt(month) - 1]} de ${year}`
 }
+
+export function convertToDate(date: string){
+  const [year, month, day] = date.split('-')
+  return new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
+}

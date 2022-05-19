@@ -7,7 +7,7 @@ export const Container = styled.header`
 `;
 
 export const Title = styled.h1`
-   max-width: 1100px;
+   max-width: 900px;
    margin-inline: auto;
    text-align: center;
    color: #fff;
